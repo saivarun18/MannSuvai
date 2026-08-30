@@ -1,22 +1,30 @@
 package com.mannsuvai.app
 
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.core.content.FileProvider
 import java.io.File
+
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 
 /**
  * ShareManager
@@ -332,15 +340,16 @@ data class ShareOption(
 /**
  * Share menu implementation in Compose
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShareMenuBottomSheet(
     recipe: Recipe,
     onDismiss: () -> Unit,
-    context: android.content.Context
+    context: Context
 ) {
     val shareOptions = remember { ShareManager.getAvailableSharingApps(context) }
     
-    androidx.compose.material3.ModalBottomSheet(
+    ModalBottomSheet(
         onDismissRequest = onDismiss
     ) {
         Column(
@@ -372,7 +381,7 @@ fun ShareMenuBottomSheet(
                     Text(
                         option.name,
                         modifier = Modifier.fillMaxWidth(),
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Start,
+                        textAlign = TextAlign.Start,
                         color = Color(0xFFD4A574)
                     )
                 }
@@ -394,7 +403,7 @@ fun ShareMenuBottomSheet(
                 Text(
                     "📋 Copy to Clipboard",
                     modifier = Modifier.fillMaxWidth(),
-                    textAlign = androidx.compose.ui.text.style.TextAlign.Start,
+                    textAlign = TextAlign.Start,
                     color = Color(0xFFD4A574)
                 )
             }
