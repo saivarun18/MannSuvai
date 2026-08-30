@@ -14,5 +14,7 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5'
       - name: Build APK
-        run: gradle assembleDebug
+        run: ./gradlew assembleDebug || gradle assembleDebug
