@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import com.mannsuvai.app.BuildConfig
 
 /**
  * RecipeImageGenerator
@@ -31,13 +30,10 @@ object RecipeImageGenerator {
         // Title
         canvas.drawText(recipe.name, 100f, 200f, paint)
 
-        // Footer build reference
-        val isDebug = BuildConfig.DEBUG
-        val footerText = if (isDebug) "Mann Suvai (Debug Build)" else "Mann Suvai"
-        
+        // Footer text
         paint.textSize = 32f
         paint.color = Color.GRAY
-        canvas.drawText(footerText, 100f, height - 100f, paint)
+        canvas.drawText("Mann Suvai", 100f, height - 100f, paint)
 
         return bitmap
     }
