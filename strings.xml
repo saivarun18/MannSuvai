@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mann Suvai</string>
+    <string name="app_description">Transform your handwritten recipes into beautiful, shareable cooking guides</string>
+    
+    <!-- Screens -->
+    <string name="screen_recipes">My Recipes</string>
+    <string name="screen_add_recipe">Add Recipe</string>
+    <string name="screen_recipe_detail">Recipe Details</string>
+    
+    <!-- Buttons -->
+    <string name="btn_add_recipe">Add Recipe</string>
+    <string name="btn_take_photo">Take Photo</string>
+    <string name="btn_choose_gallery">Choose from Gallery</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_edit">Edit</string>
+    
+    <!-- Messages -->
+    <string name="msg_no_recipes">No recipes yet</string>
+    <string name="msg_add_first_recipe">Photograph your handwritten recipes to get started</string>
+    <string name="msg_capture_recipe">Capture Your Recipe</string>
+    <string name="msg_processing">Processing your recipe...</string>
+    <string name="msg_error_processing">Error processing recipe. Please try again.</string>
+    <string name="msg_permission_denied">Camera permission is required to capture recipes</string>
+    
+    <!-- Steps -->
+    <string name="step_count">steps</string>
+    <string name="step_number">Step %1$d</string>
+    
+    <!-- Share -->
+    <string name="share_title">Share Recipe</string>
+    <string name="share_subject">Check out this recipe from Mann Suvai</string>
+    <string name="share_text">🍳 %1$s\n\nFrom Mann Suvai - Fresh from your notebook!\n\nSteps:\n%2$s\n\n👨‍🍳 Shared via Mann Suvai App</string>
+    
+    <!-- Brand -->
+    <string name="brand_name">Mann Suvai</string>
+    <string name="brand_tagline">Your taste, captured</string>
+</resources>
